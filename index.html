@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Enthusiatic Music Player</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="music-player">
+    <div class="player-header">
+      <h1> Playing</h1>
+    </div>
+    <div class="track-info">
+      <div class="track-art" id="trackArt"></div>
+      <div class="track-details">
+        <div class="track-name" id="trackName">	NIGHT OWL</div>
+        <div class="track-artist" id="trackArtist">NIGHT MAN</div>
+      </div>
+    </div>
+    <div class="controls">
+      <button class="control-button" onclick="prevTrack()">&#9665;</button>
+      <button class="control-button playpause-track" onclick="playpauseTrack()">
+        <span id="playpauseIcon">&#9658;</span>
+      </button>
+      <button class="control-button" onclick="nextTrack()">&#9655;</button>
+    </div>
+    <div class="sliders">
+      <input type="range" class="seek-slider" value="0" step="1" min="0" max="100" oninput="seekTo()">
+      <input type="range" class="volume-slider" value="100" step="1" min="0" max="100" oninput="setVolume()">
+    </div>
+    <div class="time-info">
+      <div class="current-time" id="currentTime">00:00</div>
+      <div class="total-duration" id="totalDuration">00:00</div>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
